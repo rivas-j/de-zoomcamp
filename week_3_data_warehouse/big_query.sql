@@ -11,7 +11,7 @@ LIMIT 100;
 CREATE OR REPLACE EXTERNAL TABLE `calcium-petal-376805.ny_taxi_test.external_yellow_tripdata`
 OPTIONS (
   format = 'CSV',
-  uris = ['gs://ny_taxi_prefect/trip_data/yellow_tripdata_2019-*.csv', 'gs://ny_taxi_prefect/trip_data/yellow_tripdata_2020-*.csv']
+  uris = ['gs://ny_taxi_prefect/trip_data/yellow/yellow_tripdata_2019-*.gz', 'gs://ny_taxi_prefect/trip_data/yellow/yellow_tripdata_2020-*.gz']
 );
 
 --Green Trips
@@ -19,7 +19,7 @@ OPTIONS (
 CREATE OR REPLACE EXTERNAL TABLE `calcium-petal-376805.ny_taxi_test.external_green_tripdata`
 OPTIONS (
   format = 'CSV',
-  uris = ['gs://ny_taxi_prefect/trip_data/green_tripdata_2019-*.gz', 'gs://ny_taxi_prefect/trip_data/green_tripdata_2020-*.gz']
+  uris = ['gs://ny_taxi_prefect/trip_data/green/green_tripdata_2019-*.gz', 'gs://ny_taxi_prefect/trip_data/green/green_tripdata_2020-*.gz']
 );
 
 --gs://ny_taxi_prefect/trip_data/yellow_tripdata_2019-02.csv
