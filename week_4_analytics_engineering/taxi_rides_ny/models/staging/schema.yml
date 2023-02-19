@@ -4,22 +4,22 @@ version: 2
 sources:
     - name: staging
       #For bigquery:
-      #database: taxi-rides-ny-339813
+      database: calcium-petal-376805
 
       # For postgres:
-      database: production
+      #database: production
 
-      schema: trips_data_all
+      schema: ny_taxi_test
 
       # loaded_at_field: record_loaded_at
       tables:
-        - name: green_tripdata
-        - name: yellow_tripdata
+        #- name: green_tripdata
+        - name: external_yellow_tripdata
          # freshness:
            # error_after: {count: 6, period: hour}
 
 models:
-    - name: stg_green_tripdata
+    - name: stg_yellow_tripdata
       description: >
         Trip made by green taxis, also known as boro taxis and street-hail liveries.
         Green taxis may respond to street hails,but only in the areas indicated in green on the
