@@ -16,7 +16,7 @@ trips_unioned as (
     select * from green_data
     union all
     select * from yellow_data
-), 
+),
 
 dim_zones as (
     select * from {{ ref('dim_zones') }}
