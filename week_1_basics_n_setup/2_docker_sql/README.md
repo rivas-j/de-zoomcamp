@@ -202,23 +202,19 @@ You can solve it with `.dockerignore`:
 Run the script with Docker
 
 ```bash
-URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-09.csv.gz"
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-02.csv.gz "
 
 docker run -it \
-  --network=2_docker_sql_default \
+  --network=pg-network \
   taxi_ingest:v001 \
     --user=root \
     --password=root \
-    --host=2_docker_sql-pgdatabase-1 \
+    --host=pg-database \
     --port=5432 \
     --db=ny_taxi \
     --table_name=yellow_taxi_trips \
     --url=${URL}
 ```
-
-//Postgresql query to count # of rows
-select count('VendorID') FROM yellow_taxi_trips
-
 
 ### Docker-Compose 
 
