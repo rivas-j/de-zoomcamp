@@ -1,3 +1,12 @@
+week_6_stream_processing/avro_example/data/rides.csv
+week_5_batch_processing/code/data/raw
+week_5_batch_processing/code/fhvhv
+week_5_batch_processing/code/fhvhv_tripdata_2021-01.csv.gz
+week_5_batch_processing/code/fhvhv_tripdata_2021-06.csv.gz
+week_5_batch_processing/code/taxi+_zone_lookup.csv.1
+week_5_batch_processing/code/taxi+_zone_lookup.csv.2
+week_6_stream_processing/python/json_example/env/
+
 
 .DS_Store
 .idea
@@ -13,7 +22,8 @@
 **/ny_taxi_postgres_data/*
 serving_dir
 *.csv
+*.gz
 .ipynb_checkpoints/
-!week_6_stream_processing/avro_example/data/rides.csv
+
 
 
